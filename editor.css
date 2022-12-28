@@ -1,0 +1,204 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: purple;
+}
+.container{
+    width: 85%;
+    background: #fff;
+    padding: 20px 0;
+    border-radius: 5px;
+    box-shadow: 5px 10px 8px 5px rgb(0,0, 0);
+}
+.container.disable :where(.editor-panel, .filter-control, .save-img){
+    opacity: 0.6;
+    pointer-events: none;
+}
+.container h1{
+    text-align: center;
+    font-size: 20px;
+    color:#fff;
+    font-weight: 700;
+    background: purple;
+}
+.container .editor{
+    margin: 20px 0;
+    display: flex;
+    min-height: 335px;
+    justify-content: center;
+}
+.container .editor .editor-panel{
+    width: 300px;
+    box-shadow: 0 3px 5px 0 rgb(160, 150, 150);
+    border-radius: 5px;
+    height: 320px;
+    padding: 0 30px;
+ } 
+.container .editor .editor-panel .option{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px 0;
+} 
+.container .editor .editor-panel .option button{
+    height: 30px;
+    font-size: 0.8rem;
+    color: #667570;
+    cursor: pointer;
+    border-radius: 3px;
+    border: 1px solid #aaa;
+    background: #fff;
+}
+.container .editor .editor-panel .option button img{
+    width: 20px;
+    height: 20px;
+}
+.container .editor .editor-panel .filter .option button{
+    width: calc(100% / 2 - 5px);
+    margin: 3px 0;
+    transition: background 0.5s;
+}
+.container .editor .editor-panel .filter .option .active{
+    background: purple;
+    color:  #fff;
+    border-color: purple;
+}
+.container .editor .editor-panel label{
+    font-size: 1rem;
+    padding-bottom: 10px;
+    color: purple;
+}
+.container .editor .editor-panel .slider .filter-info{
+    display: flex;
+    justify-content: space-between;
+}
+.container .editor .editor-panel .slider .filter-info p{
+    font-size: 13px;
+    color: #667570;
+    font-weight: 700;
+}
+.container .editor .editor-panel .slider input{
+    width: 100%;
+    height: 2px;
+    accent-color: purple;
+    margin-bottom: 10px;
+    cursor: pointer;
+} 
+
+.container .editor .editor-panel .transform{
+    padding-top: 20px;
+}
+.container .editor .editor-panel .transform button{
+    width: calc(100%/4 - 3px);
+    background: rgb(226, 223, 223); 
+    transition: background 0.5s, color 0.5s;
+}
+.container .editor .editor-panel .transform button:hover{
+    background: purple;
+    color: #fff;
+}
+.container .editor .img-panel{
+    display: flex;
+    border-radius: 5px;
+    margin-left: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.container .editor .img-panel img{
+    max-height: 330px;
+    max-width: 400px;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    object-fit: contain;
+}
+.container .controls{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 30px;
+    flex-wrap: wrap;
+}
+.container .controls button{
+    height: 30px;
+    color:rgb(226, 223, 223);
+    font-size: 14px;
+    padding: 0 20px;
+    border-radius: 3px;
+    background: #fff;
+    cursor: pointer;
+    text-align: center;
+}
+.container .controls .filter-control{
+    color: #6c7570;
+    border: 1px solid #6c7570;
+}
+.container .controls .choose-img{
+    background: #6c7570;
+    border: 1px solid #6c7570;
+    transition: background .5s;
+}
+.container .controls .choose-img:hover{
+    background: #aaa;
+}
+.container .controls .save-img{
+    background: purple;
+    border: 1px solid purple;
+    color: #fff;
+    transition: all .5s;;
+}
+.container .controls .save-img:hover{
+    background: rgb(192, 51, 192);
+    border: 1px solid purple;
+    color: #fff;
+}
+.time{
+    position: fixed;
+    color: #fff;
+    background: purple;
+    right: 0;
+    bottom: 0;
+    border-radius: 5px;
+}
+.time #time-change{
+    font-size: 17px;
+}
+
+@media screen and (max-width: 768px){
+    .container{
+        padding: 25px;
+    }
+    .container .editor{
+        flex-wrap: wrap-reverse;
+    }
+    .container .editor .editor-panel{
+        width: 100%;
+    }
+    .container .editor .img-panel{
+        width: 100%;
+        margin: 0 0 15px;
+    } 
+    .container .controls button{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .container .controls .btn-row{
+        width: 100%;
+    }
+    .container .controls .btn-row .save-img{
+        margin-left: 0;
+    }
+    .container .controls{
+        margin: 0;;
+    }
+}
