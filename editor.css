@@ -173,11 +173,15 @@ body{
 }
 .time #time-change{
     font-size: 17px;
+    text-transform: lowercase;
 }
 
 @media screen and (max-width: 768px){
     .container{
-        padding: 25px;
+        padding: 15px;
+    }
+    .time{
+        margin-right: 10px;
     }
     .container .editor{
         flex-wrap: wrap-reverse;

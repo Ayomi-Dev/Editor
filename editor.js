@@ -117,7 +117,7 @@ rotateOption.forEach((option) =>{
 
 const resetFilter = () => {
     rotate = 0; flipHorizontal = 1; flipVertical = 1;
-    brightness = 100; saturation = 100; inversion = 0; grayscale = 0;
+    brightness = 100; saturation = 100; inversion = 0; grayscale = 0; contrast = 100; blur=0;
     applyFilters();
     filterOptions[0].click();
 }
