@@ -193,6 +193,9 @@ body{
         width: 100%;
         margin: 0 0 15px;
     } 
+    .container .controls{
+        width: 100%;
+    }
     .container .controls button{
         width: 100%;
         margin-bottom: 10px;
@@ -202,8 +205,5 @@ body{
     }
     .container .controls .btn-row .save-img{
         margin-left: 0;
-    }
-    .container .controls{
-        margin: 0;;
     }
 }
