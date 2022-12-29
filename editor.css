@@ -19,7 +19,7 @@ body{
     background: #fff;
     padding: 20px 0;
     border-radius: 5px;
-    box-shadow: 5px 10px 8px 5px rgb(0,0, 0);
+    box-shadow: 5px 7px 4px 1px rgb(0,0, 0);
 }
 .container.disable :where(.editor-panel, .filter-control, .save-img){
     opacity: 0.6;
