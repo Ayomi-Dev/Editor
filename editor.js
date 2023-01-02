@@ -139,13 +139,16 @@ const saveImg = () => { //click function for saving image
     }
     ctx.scale(flipHorizontal, flipVertical);
     ctx.drawImage(imgPreview, -canvas.width / 2, -canvas.height / 2, canvas.width, canvas.height);
-    container.appendChild(canvas); //declaring the image to be drawn and its properties
+    // container.appendChild(canvas); //declaring the image to be drawn and its properties
 
 
     const link = document.createElement('a'); //creating an anchor tag to download image
     link.download = 'image.jpg'; //passing the tag download value to image.jpg
     link.href = canvas.toDataURL(); // passing the tag href to canvas data url
     link.click(); //click function to download the image
+    imgPreview.src = 'preview.png'
+    document.querySelector('.container').classList.add('disable');
+    resetBtn.click();
 }
 
 resetBtn.addEventListener('click', resetFilter)
