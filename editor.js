@@ -127,8 +127,8 @@ const saveImg = () => { //click function for saving image
     const ctx = canvas.getContext("2d"); //returning a drawing using the canvas getcontext method
 
 
-    canvas.width = imgPreview.width; //setting canvas width to image  widtth
-    canvas.height = imgPreview.height; //setting canvas height to image  widtth
+    canvas.width = imgPreview.naturalWidth; //setting canvas width to image  widtth
+    canvas.height = imgPreview.naturalHeight; //setting canvas height to image  widtth
 
     ctx.filter = `brightness(${brightness}%) saturate(${saturation}%) invert(${inversion}%)
     grayscale(${grayscale}%)  contrast(${contrast}%)  blur(${blur}px)`;
